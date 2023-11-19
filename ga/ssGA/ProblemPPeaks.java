@@ -124,7 +124,7 @@ private static int w[]={2902, 5235, 357, 6058, 4846, 8280, 1295, 181, 3264,
       for(p=0;p<P;p++)
       {
         for(j=0;j<N;j++)
-        if(r.nextDouble()<0.5)	peak[p][j] = 1;
+        if(Exe.rand.nextDouble()<0.5)	peak[p][j] = 1;
         else	peak[p][j] = 0;
       }
     }

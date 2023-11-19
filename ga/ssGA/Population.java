@@ -11,7 +11,7 @@ public class Population
 {
   // PRIVATE MEMORY
   private int       popsize;  // The number of individuals
-  private Individual pop[];   // The vector of individuals
+  private Individual [] pop;   // The vector of individuals
 
   private int chrom_length;   // The length of the chromosomes
 
@@ -51,18 +51,22 @@ public class Population
 
   public Individual get_ith(int index)throws Exception
   {
-    if ((index<popsize) && (index>=0))
-    return pop[index];
-    else
-    throw new Exception("Index out of range when getting a copy of an individual");
+    if ((index<popsize) && (index>=0)) {
+      return pop[index];
+    }
+    else {
+      throw new Exception("Index out of range when getting a copy of an individual");
+    }
   }
 
   public void set_ith(int index, Individual indiv)  throws Exception
   {
-    if ((index<popsize) && (index>=0))
-    pop[index].assign(indiv);
-    else
-    throw new Exception("Index out of range when inserting and individual");
+    if ((index<popsize) && (index>=0)){
+      pop[index].assign(indiv);
+    }
+    else{
+      throw new Exception("Index out of range when inserting and individual");
+    }
 
     // ALWAYS RECOMPUTE STATS AFTER INSERTION
     compute_stats();
@@ -102,12 +106,13 @@ public double get_BESTF()  { return BESTF;  }
 
   public void print()
   {
-    for(int i=0;i<popsize;i++)
-    {  System.out.print(i);    System.out.print("   ");
-      for(int j=0;j<chrom_length;j++)
-      System.out.print(pop[i].get_allele(j));
-      System.out.print("   ");
-      System.out.println(pop[i].get_fitness());
+    for(int i=0;i<popsize;i++) {
+      System.out.print(i);    System.out.print("   ");
+      for(int j=0;j<chrom_length;j++){
+        System.out.print(pop[i].get_allele(j));
+        System.out.print("   ");
+        System.out.println(pop[i].get_fitness());
+      }
     }
   }
 

@@ -47,12 +47,12 @@ public class Algorithm
   {
     int p1, p2;
 
-    p1 = (int)(r.nextDouble()*
+    p1 = (int)(Exe.rand.nextDouble()*
                (double)popsize + 0.5); // Round and then trunc to int
     
     if(p1>popsize-1) p1=popsize-1;
     do
-    {  p2 = (int)(r.nextDouble()*
+    {  p2 = (int)(Exe.rand.nextDouble()*
                   (double)popsize + 0.5);  // Round and then trunc to int
       if(p2>popsize-1) p2=popsize-1;
     }
@@ -69,12 +69,12 @@ public class Algorithm
   {
     int       rand;
 
-    rand = (int)(r.nextDouble()*
+    rand = (int)(Exe.rand.nextDouble()*
                  (double)chrom_length-1+0.5); // From 0 to L-1 rounded
     if(rand>chrom_length-1) rand=chrom_length-1;
 
-    if(r.nextDouble()>pc)  // If no crossover then randomly returns one parent
-    return r.nextDouble()>0.5?p1:p2;
+    if(Exe.rand.nextDouble()>pc)  // If no crossover then randomly returns one parent
+    return Exe.rand.nextDouble()>0.5?p1:p2;
 
     // Copy CHROMOSOME 1
     for (int i=0; i<rand; i++)
@@ -99,14 +99,16 @@ public class Algorithm
 
     aux_indiv.assign(p1);
 
-    for(int i=0; i<chrom_length; i++)
-    if (r.nextDouble()<=pm)  // Check mutation bit by bit...
-    {
-      if(aux_indiv.get_allele(i)==1)
-      aux_indiv.set_allele(i,(byte)0);
-      else
-      aux_indiv.set_allele(i,(byte)1);
+    for(int i=0; i<chrom_length; i++){
+      if (Exe.rand.nextDouble()<=pm)  // Check mutation bit by bit...
+      {
+        if(aux_indiv.get_allele(i)==1)
+          aux_indiv.set_allele(i,(byte)0);
+        else
+          aux_indiv.set_allele(i,(byte)1);
+      }
     }
+
 
     return aux_indiv;
 
@@ -153,6 +155,11 @@ public double get_BESTF()  { return pop.get_BESTF();  }
   public void set_ith(int index, Individual indiv) throws Exception
   {
     pop.set_ith(index,indiv);
+  }
+
+  public Individual get_best_individual()
+  {
+    return aux_indiv;// The better individual is the solution
   }
 }
 // END OF CLASS: Algorithm
