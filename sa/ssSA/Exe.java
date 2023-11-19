@@ -23,7 +23,7 @@ public class Exe
   private double initial_probability = -1;
   @Option(name="-n", aliases="--numInitialEstimates", usage="Initial number of estimates to adjust the initial temperature.")
   private int num_initial_estimates = -1;
-  @Option(name="-S", aliases="--stepsAnnealing", usage="Steps for annealing.")
+  @Option(name="-S", aliases="--stepsAnnealing", usage="Factor used for steps for annealing.")
   private int steps_for_annealing = -1;
   @Option(name="-s", aliases="--seed", usage="Random seed.")
   private int seed = -1;
