@@ -16,6 +16,7 @@ public class Algorithm
   private  int          gene_length;  // Number of bits per gene
   private  int          popsize;      // Number of individuals in the population
   private  double pc, pm;      // Probability of applying crossover and mutation
+  private  int type_crossover, type_mutation;      // Probability of applying crossover and mutation
   private  Problem       problem;     // The problem being solved
   private  Population    pop;         // The population
   private  static Random r;           // Source for random values in this class
@@ -23,7 +24,7 @@ public class Algorithm
 
 
   // CONSTRUCTOR
-  public Algorithm(Problem p, int popsize, int gn, int gl, double pc, double pm)
+  public Algorithm(Problem p, int popsize, int gn, int gl, double pc, double pm, int type_crossover, int type_mutation)
   throws Exception
   {
     this.gene_number   = gn;
@@ -32,6 +33,8 @@ public class Algorithm
     this.popsize       = popsize;
     this.pc            = pc;
     this.pm            = pm;
+    this.type_crossover           = type_crossover;
+    this.type_mutation            = type_mutation;
     this.problem       = p;                     
     this.pop = new Population(popsize,chrom_length);// Create initial population
     this.r             = new Random();
@@ -90,6 +93,24 @@ public class Algorithm
     return aux_indiv;
   }
 
+  // UNIFORM CROSSOVER - ONLY ONE CHILD IS CREATED (RANDOMLY DISCARD
+  // DE OTHER)
+  public Individual UXP(Individual p1, Individual p2) {
+    // If no crossover then randomly returns one parent
+    if(Exe.rand.nextDouble() > pc) {
+      return Exe.rand.nextDouble() > 0.5 ? p1 : p2;
+    }
+    // Runs through each allele and randomly selects which parent to take the value from
+    for (int i = 0; i < chrom_length; i++) {
+      if (Exe.rand.nextDouble() < 0.5) {
+        aux_indiv.set_allele(i, p1.get_allele(i));
+      } else {
+        aux_indiv.set_allele(i, p2.get_allele(i));
+      }
+    }
+
+    return aux_indiv;
+  }
 
   // MUTATE A BINARY CHROMOSOME
   public Individual mutate(Individual p1)
@@ -114,6 +135,30 @@ public class Algorithm
 
   }
 
+  // SWAP MUTATION
+  public Individual swapMutate(Individual p1) {
+    if(Exe.rand.nextDouble() > pc) {
+      return p1;
+    }
+    aux_indiv.assign(p1);
+
+    // Selects two different random indexes on the chromosome
+    int index1 = Exe.rand.nextInt(chrom_length);
+    int index2 = Exe.rand.nextInt(chrom_length);
+    while(index1 == index2) {
+      index2 = Exe.rand.nextInt(chrom_length); // Ensures that index2 is different from index1
+    }
+
+    // Swap alleles at selected indices.
+    byte allele1 = aux_indiv.get_allele(index1);
+    byte allele2 = aux_indiv.get_allele(index2);
+
+    aux_indiv.set_allele(index1, allele2);
+    aux_indiv.set_allele(index2, allele1);
+
+    return aux_indiv;
+  }
+
   // REPLACEMENT - THE WORST INDIVIDUAL IS ALWAYS DISCARDED
   public void replace(Individual new_indiv) throws Exception
   {
@@ -129,8 +174,10 @@ public class Algorithm
 
   public void go_one_step() throws Exception
   {
-    aux_indiv.assign( SPX(select_tournament(),select_tournament()) );
-    aux_indiv.set_fitness(problem.evaluateStep(mutate(aux_indiv)));
+    Individual offspring = (this.type_crossover == 0) ? SPX(select_tournament(),select_tournament()) : UXP(select_tournament(),select_tournament());
+    aux_indiv.assign(offspring);
+    offspring = (this.type_mutation == 0) ? mutate(offspring) : swapMutate(offspring);
+    aux_indiv.set_fitness(problem.evaluateStep(offspring));
     replace(aux_indiv);
   }
 

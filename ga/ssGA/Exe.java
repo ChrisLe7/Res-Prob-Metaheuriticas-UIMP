@@ -21,6 +21,11 @@ public class Exe
   private double pm = -1;
   @Option(name="-c", aliases="--crossover", usage="Crossover probability.")
   private double pc = -1;
+  @Option(name="-M", aliases="--mutationType", usage="Mutation probability.")
+  private int type_mutation = -1;
+  @Option(name="-C", aliases="--crossoverType", usage="Crossover probability.")
+  private int type_crossover = -1;
+
   @Option(name="-p", aliases="--population", usage="Size population.")
   private int population_size = -1;
   @Option(name="-s", aliases="--seed", usage="Random seed.")
@@ -68,7 +73,12 @@ public class Exe
     if (population_size <= 0) population_size = 15;  // Population size
     if (pc == -1) pc = 0.8;                           // Crossover probability
     if (pm == -1) pm  = 0.1;                          // Mutation probability
+
+    if ((type_crossover == -1) || (type_mutation != 0 && type_mutation != 1)) type_crossover = 0;     // Default Crossover Type (SPX)
+    if ((type_mutation == -1) || (type_mutation != 0 && type_mutation != 1)) type_mutation = 0;      // Default Crossover Type (SPX)
+
     long MAX_ISTEPS = 50000;
+    long MAX_EVALUATIONS = 50000;
 
 
     //Default MKP problem parameters. If the MKP problem changes, these parameters have to been changed too.
@@ -90,9 +100,9 @@ public class Exe
     }
 
     Algorithm ga;          // The ssGA being used
-    ga = new Algorithm(problem, population_size, gn, gl, pc, pm);
+    ga = new Algorithm(problem, population_size, gn, gl, pc, pm, type_crossover, type_mutation);
     int step;
-    for (step=0; step<MAX_ISTEPS; step++){
+    for (step=0; step<MAX_ISTEPS && problem.get_fitness_counter() < MAX_EVALUATIONS; step++){
       ga.go_one_step();
       System.out.print(step); System.out.print("  ");
       System.out.println(ga.get_bestf());
@@ -109,6 +119,7 @@ public class Exe
 
     System.out.print("Tiempo (ms): "+tiempo+"\t");
     System.out.print("Iteraciones: " + step); System.out.print("\t");
+    System.out.print("Evaluaciones: " + problem.get_fitness_counter()); System.out.print("\t");
     System.out.println("Fitness: " + ga.get_solution().get_fitness());
 
     System.out.println("Solución:");
