@@ -68,6 +68,7 @@ public class Exe
     int in;                                           // Item number
     int il;                                           // Item length
     long MAX_ISTEPS = 50000;
+    long MAX_EVALUATIONS = 50000;
     if (annealing_factor == -1 ) annealing_factor = 0.9;
     if (initial_probability == -1 ) initial_probability = 0.9999;
     if (num_initial_estimates == -1 ) num_initial_estimates = 10;
@@ -95,7 +96,7 @@ public class Exe
     Algorithm sa;          // The ssSA being used
     sa = new Algorithm(problem, in, il, initial_probability, num_initial_estimates, annealing_factor, steps_for_annealing);
     int step;
-    for (step=0; step<MAX_ISTEPS; step++){
+    for (step=0; step<MAX_ISTEPS && problem.get_fitness_counter() < MAX_EVALUATIONS; step++){
       sa.go_one_step();
       System.out.print(step); System.out.print("  ");
       System.out.println(sa.get_current().get_fitness());
@@ -112,6 +113,7 @@ public class Exe
 
     System.out.print("Tiempo (ms): "+tiempo+"\t");
     System.out.print("Iteraciones: " + step); System.out.print("\t");
+    System.out.print("Evaluaciones: " + problem.get_fitness_counter()); System.out.print("\t");
     System.out.println("Fitness: " + sa.get_best().get_fitness());
 
     System.out.println("Solución:");
