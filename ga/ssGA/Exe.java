@@ -77,8 +77,8 @@ public class Exe
     if ((type_crossover == -1) || (type_mutation != 0 && type_mutation != 1)) type_crossover = 0;     // Default Crossover Type (SPX)
     if ((type_mutation == -1) || (type_mutation != 0 && type_mutation != 1)) type_mutation = 0;      // Default Crossover Type (SPX)
 
-    long MAX_ISTEPS = 50000;
-    long MAX_EVALUATIONS = 50000;
+    long MAX_ISTEPS = 10000;
+    long MAX_EVALUATIONS = 10000;
 
 
     //Default MKP problem parameters. If the MKP problem changes, these parameters have to been changed too.
@@ -102,10 +102,14 @@ public class Exe
     Algorithm ga;          // The ssGA being used
     ga = new Algorithm(problem, population_size, gn, gl, pc, pm, type_crossover, type_mutation);
     int step;
+    System.out.println("STEP  CURRENT_FITNESS  AVG_FITNESS BEST_FITNESS  BEST");
     for (step=0; step<MAX_ISTEPS && problem.get_fitness_counter() < MAX_EVALUATIONS; step++){
       ga.go_one_step();
       System.out.print(step); System.out.print("  ");
-      System.out.println(ga.get_bestf());
+      System.out.print(ga.get_individual().get_fitness()); System.out.print("  ");
+      System.out.print(ga.get_avgf()); System.out.print("  ");
+      System.out.print(ga.get_solution().get_fitness()); System.out.print("  ");
+      System.out.println(ga.get_BESTF());
       if ((problem.tf_known()) & ga.get_solution().get_fitness()>=(problem.get_target_fitness())) {
         System.out.print("Solution Found! After ");
         System.out.print(problem.get_fitness_counter());

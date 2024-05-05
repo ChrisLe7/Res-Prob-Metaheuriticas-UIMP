@@ -44,8 +44,7 @@ public class Exe
 
     } catch( CmdLineException e ) {
       // if there's a problem in the command line,
-      // you'll get this exception. this will report
-      // an error message.
+      // this exception will be thrown. 
       System.err.println(e.getMessage());
       System.err.println("java SampleMain [options...] arguments...");
       // print the list of available options
@@ -67,8 +66,8 @@ public class Exe
     //Parameters MKP
     int in;                                           // Item number
     int il;                                           // Item length
-    long MAX_ISTEPS = 50000;
-    long MAX_EVALUATIONS = 50000;
+    long MAX_ISTEPS = 10000;
+    long MAX_EVALUATIONS = 10000;
     if (annealing_factor == -1 ) annealing_factor = 0.9;
     if (initial_probability == -1 ) initial_probability = 0.9999;
     if (num_initial_estimates == -1 ) num_initial_estimates = 10;
@@ -96,10 +95,12 @@ public class Exe
     Algorithm sa;          // The ssSA being used
     sa = new Algorithm(problem, in, il, initial_probability, num_initial_estimates, annealing_factor, steps_for_annealing);
     int step;
+    System.out.println("STEP  CURRENT_FITNESS  BEST");
     for (step=0; step<MAX_ISTEPS && problem.get_fitness_counter() < MAX_EVALUATIONS; step++){
       sa.go_one_step();
       System.out.print(step); System.out.print("  ");
-      System.out.println(sa.get_current().get_fitness());
+      System.out.print(sa.get_current().get_fitness()); System.out.print("  ");
+      System.out.println(sa.get_best().get_fitness());
       if ((problem.tf_known()) & sa.get_current().get_fitness()>=(problem.get_target_fitness())) {
         System.out.print("Solution Found! After ");
         System.out.print(problem.get_fitness_counter());

@@ -204,9 +204,9 @@ public double get_BESTF()  { return pop.get_BESTF();  }
     pop.set_ith(index,indiv);
   }
 
-  public Individual get_best_individual()
+  public Individual get_individual()
   {
-    return aux_indiv;// The better individual is the solution
+    return aux_indiv;// The current individual is the solution
   }
 }
 // END OF CLASS: Algorithm
