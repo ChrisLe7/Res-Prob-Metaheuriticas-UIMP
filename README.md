@@ -13,9 +13,9 @@ In this repository, both a genetic algorithm and a simulated annealing algorithm
 ### Genetic Algorithm
 
 * -c (--crossover) N : Crossover probability.
-* -C (--crossoverType) N : Permite indicar el tipo de operador de cruce a utilizar. Si es 0 utilizará el SPX (Single-point crossover) y si es 1 utilizará UC (Uniform Crossover).
+* -C (--crossoverType) N : Allows specifying the type of crossover operator to use. If it is 0, it will use SPX (Single-point crossover), and if it is 1, it will use UC (Uniform Crossover).
 * -m (--mutation) N : Mutation probability.
-* -M (--mutationType) N : Mutation probability.
+* -M (--mutationType) N : Allows specifying the type of mutation operator to use. If it is 0, it will use Base, and if it is 1, it will use Swap.
 * -p (--population) N : Population size.
 * -s (--seed) N : Random seed.
 * -f (--file) VAL : Path of the file with the problem instance.
