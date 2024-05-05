@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Results of Work 3.6 Comparison of a population and a trajectory-based algorithm (knapsack)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 id="parameter-tuning">Results of Work 3.6 Comparison of a population and a trajectory-based algorithm (knapsack)</h1>
+<p>On this website, we aim to display all the results from the experimentation conducted for <strong>Work 3.6 Comparison of a Population Algorithm and a Trajectory Algorithm (knapsack)</strong>, due to the extent of the results.</p>
+<h1 id="parameter-tuning">Parameter Tuning</h1>
+<h2 id="genetic-algorithm-ga">Genetic Algorithm (GA)</h2>
+<p>In assessing the genetic algorithm&#39;s performance post-enhancements, we explored the impact of varying crossover and mutation operators and their associated probabilities, with a constant population size of 15 individuals. We examined the following parameter values:</p>
+<ul>
+<li><strong>Crossover Type (TP)</strong>: {SPX (0), UC (1)}</li>
+<li><strong>Mutation Type (TM)</strong>: {Base (0), Swap (1)}</li>
+<li><strong>Crossover Probability (PC)</strong>: {0.9, 0.75, 0.5}</li>
+<li><strong>Mutation Probability (PM)</strong>: {0.01, 0.1, 0.3}</li>
+</ul>
+<p>For a comprehensive analysis, we assessed all combinations of these parameters, consisting in total of 36 configurations. Space constraints preclude a full display here; thus, we present a table summarizing all results. </p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>PC_0.5_PM_0.01_TC_0_TM_0</th>
+<th>PC_0.5_PM_0.01_TC_0_TM_1</th>
+<th>PC_0.5_PM_0.01_TC_1_TM_0</th>
+<th>PC_0.5_PM_0.01_TC_1_TM_1</th>
+<th>PC_0.5_PM_0.1_TC_0_TM_0</th>
+<th>PC_0.5_PM_0.1_TC_0_TM_1</th>
+<th>PC_0.5_PM_0.1_TC_1_TM_0</th>
+<th>PC_0.5_PM_0.1_TC_1_TM_1</th>
+<th>PC_0.5_PM_0.3_TC_0_TM_0</th>
+<th>PC_0.5_PM_0.3_TC_0_TM_1</th>
+<th>PC_0.5_PM_0.3_TC_1_TM_0</th>
+<th>PC_0.5_PM_0.3_TC_1_TM_1</th>
+<th>PC_0.75_PM_0.01_TC_0_TM_0</th>
+<th>PC_0.75_PM_0.01_TC_0_TM_1</th>
+<th>PC_0.75_PM_0.01_TC_1_TM_0</th>
+<th>PC_0.75_PM_0.01_TC_1_TM_1</th>
+<th>PC_0.75_PM_0.1_TC_0_TM_0</th>
+<th>PC_0.75_PM_0.1_TC_0_TM_1</th>
+<th>PC_0.75_PM_0.1_TC_1_TM_0</th>
+<th>PC_0.75_PM_0.1_TC_1_TM_1</th>
+<th>PC_0.75_PM_0.3_TC_0_TM_0</th>
+<th>PC_0.75_PM_0.3_TC_0_TM_1</th>
+<th>PC_0.75_PM_0.3_TC_1_TM_0</th>
+<th>PC_0.75_PM_0.3_TC_1_TM_1</th>
+<th>PC_0.9_PM_0.01_TC_0_TM_0</th>
+<th>PC_0.9_PM_0.01_TC_0_TM_1</th>
+<th>PC_0.9_PM_0.01_TC_1_TM_0</th>
+<th>PC_0.9_PM_0.01_TC_1_TM_1</th>
+<th>PC_0.9_PM_0.1_TC_0_TM_0</th>
+<th>PC_0.9_PM_0.1_TC_0_TM_1</th>
+<th>PC_0.9_PM_0.1_TC_1_TM_0</th>
+<th>PC_0.9_PM_0.1_TC_1_TM_1</th>
+<th>PC_0.9_PM_0.3_TC_0_TM_0</th>
+<th>PC_0.9_PM_0.3_TC_0_TM_1</th>
+<th>PC_0.9_PM_0.3_TC_1_TM_0</th>
+<th>PC_0.9_PM_0.3_TC_1_TM_1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>problem_mknap1</td>
+<td>3706.6667+-355.1914</td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td>3753.3333+-255.6039</td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3706.6667+-355.1914</td>
+<td>3780.0000+-109.5445</td>
+<td>3706.6667+-355.1914</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td>3780.0000+-109.5445</td>
+<td><strong>3800.0000+-0.0000</strong></td>
+<td><strong>3800.0000+-0.0000</strong></td>
+</tr>
+<tr>
+<td>problem_mknap2</td>
+<td>8398.4333+-139.9449</td>
+<td>8299.0633+-393.0126</td>
+<td>8398.4333+-139.9449</td>
+<td>8373.3800+-197.7713</td>
+<td>8583.0333+-177.0179</td>
+<td>8299.0633+-393.0126</td>
+<td>8644.5667+-139.9449</td>
+<td>8373.3800+-197.7713</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8299.0633+-393.0126</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8373.3800+-197.7713</td>
+<td>8410.7400+-150.2046</td>
+<td>8318.0500+-332.4720</td>
+<td>8410.7400+-150.2046</td>
+<td>8360.6267+-212.3991</td>
+<td>8619.9533+-158.8236</td>
+<td>8318.0500+-332.4720</td>
+<td>8607.6467+-166.0575</td>
+<td>8360.6267+-212.3991</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8318.0500+-332.4720</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8360.6267+-212.3991</td>
+<td>8410.7400+-150.2046</td>
+<td>8268.3900+-435.8740</td>
+<td>8386.1267+-127.6494</td>
+<td>8387.3633+-184.6547</td>
+<td>8619.9533+-158.8236</td>
+<td>8268.3900+-435.8740</td>
+<td>8595.3400+-172.0810</td>
+<td>8387.3633+-184.6547</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8268.3900+-435.8740</td>
+<td><strong>8706.1000+-0.0000</strong></td>
+<td>8387.3633+-184.6547</td>
+</tr>
+<tr>
+<td>problem_mknap3</td>
+<td>3846.8333+-266.2915</td>
+<td>3963.5000+-52.8523</td>
+<td>3857.3333+-271.7844</td>
+<td>3856.0000+-267.0800</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3963.5000+-52.8523</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3856.0000+-267.0800</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3963.5000+-52.8523</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3856.0000+-267.0800</td>
+<td>3879.0000+-206.3868</td>
+<td>3974.5000+-59.3841</td>
+<td>3906.5000+-228.9976</td>
+<td>3927.5000+-185.2200</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3974.5000+-59.3841</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3927.5000+-185.2200</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3974.5000+-59.3841</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3927.5000+-185.2200</td>
+<td>3874.6667+-223.6297</td>
+<td>3955.0000+-55.1800</td>
+<td>3950.5000+-134.0635</td>
+<td>4000.0000+-29.3316</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3955.0000+-55.1800</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>4000.0000+-29.3316</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>3955.0000+-55.1800</td>
+<td><strong>4015.0000+-0.0000</strong></td>
+<td>4000.0000+-29.3316</td>
+</tr>
+<tr>
+<td>problem_mknap4</td>
+<td>5646.3333+-346.5070</td>
+<td>5634.0000+-352.6755</td>
+<td>5631.8333+-408.6531</td>
+<td>5663.0000+-433.6624</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5634.0000+-352.6755</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5663.0000+-433.6624</td>
+<td>6119.0000+-3.0513</td>
+<td>5634.0000+-352.6755</td>
+<td>6118.0000+-4.8423</td>
+<td>5663.0000+-433.6624</td>
+<td>5639.0000+-363.5467</td>
+<td>5733.6667+-368.7255</td>
+<td>5738.3333+-293.6522</td>
+<td>5757.6667+-373.6717</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5733.6667+-368.7255</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5757.6667+-373.6717</td>
+<td>6118.6667+-3.4575</td>
+<td>5733.6667+-368.7255</td>
+<td>6118.0000+-4.8423</td>
+<td>5757.6667+-373.6717</td>
+<td>5682.6667+-355.8034</td>
+<td>5836.3333+-249.1293</td>
+<td>5617.1667+-485.8439</td>
+<td>5781.1667+-455.8900</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5836.3333+-249.1293</td>
+<td><strong>6120.0000+-0.0000</strong></td>
+<td>5781.1667+-455.8900</td>
+<td>6118.6667+-4.3417</td>
+<td>5836.3333+-249.1293</td>
+<td>6119.3333+-2.5371</td>
+<td>5781.1667+-455.8900</td>
+</tr>
+<tr>
+<td>problem_mknap5</td>
+<td>11427.0000+-772.5468</td>
+<td>11247.0000+-801.6487</td>
+<td>11687.8333+-684.7875</td>
+<td>11661.1667+-767.5192</td>
+<td>12390.6667+-18.7420</td>
+<td>11247.0000+-801.6487</td>
+<td><strong>12393.0000+-13.9333</strong></td>
+<td>11661.1667+-767.5192</td>
+<td>12351.6667+-30.5223</td>
+<td>11247.0000+-801.6487</td>
+<td>12327.0000+-34.7553</td>
+<td>11661.1667+-767.5192</td>
+<td>11472.0000+-808.6170</td>
+<td>11454.1667+-794.0274</td>
+<td>11709.5000+-731.6530</td>
+<td>11845.0000+-559.9908</td>
+<td>12389.0000+-13.2222</td>
+<td>11454.1667+-794.0274</td>
+<td>12389.6667+-12.4522</td>
+<td>11845.0000+-559.9908</td>
+<td>12336.6667+-42.5346</td>
+<td>11454.1667+-794.0274</td>
+<td>12331.6667+-42.5954</td>
+<td>11845.0000+-559.9908</td>
+<td>11599.0000+-716.0553</td>
+<td>11655.6667+-750.2617</td>
+<td>11727.6667+-653.8108</td>
+<td>11791.1667+-721.1912</td>
+<td>12391.0000+-11.5520</td>
+<td>11655.6667+-750.2617</td>
+<td>12392.0000+-10.9545</td>
+<td>11791.1667+-721.1912</td>
+<td>12327.3333+-41.0158</td>
+<td>11655.6667+-750.2617</td>
+<td>12334.5000+-40.6064</td>
+<td>11791.1667+-721.1912</td>
+</tr>
+<tr>
+<td>problem_mknap6</td>
+<td>10317.0000+-264.3032</td>
+<td>10289.8667+-206.3022</td>
+<td>10278.0667+-401.7128</td>
+<td>10295.2333+-233.5710</td>
+<td><strong>10570.2333+-29.4146</strong></td>
+<td>10289.8667+-206.3022</td>
+<td>10557.6667+-37.3403</td>
+<td>10295.2333+-233.5710</td>
+<td>10437.0000+-47.6380</td>
+<td>10289.8667+-206.3022</td>
+<td>10429.2000+-53.5353</td>
+<td>10295.2333+-233.5710</td>
+<td>10322.7333+-221.6172</td>
+<td>10288.8667+-237.1961</td>
+<td>10263.1333+-450.3144</td>
+<td>10300.2000+-241.5111</td>
+<td>10548.5667+-49.3514</td>
+<td>10288.8667+-237.1961</td>
+<td>10561.0333+-41.4234</td>
+<td>10300.2000+-241.5111</td>
+<td>10452.6000+-46.2248</td>
+<td>10288.8667+-237.1961</td>
+<td>10435.6667+-42.3372</td>
+<td>10300.2000+-241.5111</td>
+<td>10323.0667+-238.4937</td>
+<td>10291.1333+-247.0496</td>
+<td>10377.1000+-175.2599</td>
+<td>10347.2333+-248.0582</td>
+<td>10563.4667+-41.2843</td>
+<td>10291.1333+-247.0496</td>
+<td>10549.6667+-42.6164</td>
+<td>10347.2333+-248.0582</td>
+<td>10437.5667+-40.3662</td>
+<td>10291.1333+-247.0496</td>
+<td>10440.4000+-43.5673</td>
+<td>10347.2333+-248.0582</td>
+</tr>
+<tr>
+<td>problem_mknap7</td>
+<td>15578.3333+-724.1550</td>
+<td>15621.0000+-641.9823</td>
+<td>15944.4000+-552.2870</td>
+<td>15605.8000+-746.3475</td>
+<td>16445.9667+-54.1540</td>
+<td>15621.0000+-641.9823</td>
+<td>16416.7000+-243.4086</td>
+<td>15605.8000+-746.3475</td>
+<td>16156.9667+-70.8561</td>
+<td>15621.0000+-641.9823</td>
+<td><strong>16177.8000+-54.8430</strong></td>
+<td>15605.8000+-746.3475</td>
+<td>15807.4000+-618.5571</td>
+<td>15838.1667+-616.5319</td>
+<td>15947.0667+-562.6032</td>
+<td>15898.6000+-691.5832</td>
+<td>16400.7667+-242.5617</td>
+<td>15838.1667+-616.5319</td>
+<td>16445.2667+-59.9678</td>
+<td>15898.6000+-691.5832</td>
+<td>16146.6333+-58.2074</td>
+<td>15838.1667+-616.5319</td>
+<td>16161.6333+-69.4071</td>
+<td>15898.6000+-691.5832</td>
+<td>15843.9667+-592.2205</td>
+<td>15777.2333+-532.8145</td>
+<td>15885.1000+-698.2396</td>
+<td>16007.0333+-517.0312</td>
+<td>16446.0667+-44.3605</td>
+<td>15777.2333+-532.8145</td>
+<td>16463.5333+-61.2596</td>
+<td>16007.0333+-517.0312</td>
+<td>16148.6667+-67.5402</td>
+<td>15777.2333+-532.8145</td>
+<td>16149.5333+-65.6862</td>
+<td>16007.0333+-517.0312</td>
+</tr>
+<tr>
+<td>problem_mknap8</td>
+<td><strong>23048.0000+-375.8781</strong></td>
+<td>23032.4000+-333.7357</td>
+<td>22893.9333+-498.8442</td>
+<td>22851.5667+-391.4463</td>
+<td>22340.8000+-289.6412</td>
+<td>23032.4000+-333.7357</td>
+<td>22336.6000+-287.0180</td>
+<td>22851.5667+-391.4463</td>
+<td>18020.9000+-3535.5977</td>
+<td>23032.4000+-333.7357</td>
+<td>18785.6333+-647.2338</td>
+<td>22851.5667+-391.4463</td>
+<td>22940.2667+-343.1635</td>
+<td>23044.8000+-315.2338</td>
+<td>22864.8667+-448.1123</td>
+<td>22964.4667+-411.9657</td>
+<td>22262.7000+-309.4469</td>
+<td>23044.8000+-315.2338</td>
+<td>22528.0000+-252.8208</td>
+<td>22964.4667+-411.9657</td>
+<td>18483.2000+-911.8698</td>
+<td>23044.8000+-315.2338</td>
+<td>18770.7000+-791.6399</td>
+<td>22964.4667+-411.9657</td>
+<td>22973.2000+-373.5344</td>
+<td>22816.3333+-401.0561</td>
+<td>23005.5000+-451.7111</td>
+<td>22921.4667+-338.8957</td>
+<td>22404.5000+-250.4940</td>
+<td>22816.3333+-401.0561</td>
+<td>22386.7333+-322.2099</td>
+<td>22921.4667+-338.8957</td>
+<td>18634.5667+-608.5527</td>
+<td>22816.3333+-401.0561</td>
+<td>18990.7333+-570.1756</td>
+<td>22921.4667+-338.8957</td>
+</tr>
+<tr>
+<td>problem_mknap9</td>
+<td>22940.5667+-392.2997</td>
+<td>22973.1333+-543.0128</td>
+<td>22962.9000+-366.8289</td>
+<td>22909.3667+-447.6570</td>
+<td>22129.4667+-253.2202</td>
+<td>22973.1333+-543.0128</td>
+<td>22207.0333+-307.0509</td>
+<td>22909.3667+-447.6570</td>
+<td>18252.0667+-1184.2698</td>
+<td>22973.1333+-543.0128</td>
+<td>18534.3333+-721.7659</td>
+<td>22909.3667+-447.6570</td>
+<td>22809.9667+-478.9436</td>
+<td><strong>23056.3333+-410.4359</strong></td>
+<td>22757.0667+-426.8528</td>
+<td>22870.7000+-346.7703</td>
+<td>22120.5000+-317.0005</td>
+<td><strong>23056.3333+-410.4359</strong></td>
+<td>22233.3333+-303.9703</td>
+<td>22870.7000+-346.7703</td>
+<td>18471.1000+-728.9196</td>
+<td><strong>23056.3333+-410.4359</strong></td>
+<td>18521.0333+-647.9970</td>
+<td>22870.7000+-346.7703</td>
+<td>22851.0000+-307.4076</td>
+<td>23037.2667+-303.6910</td>
+<td>22926.7333+-346.0643</td>
+<td>22891.4667+-435.1268</td>
+<td>22192.6667+-270.4646</td>
+<td>23037.2667+-303.6910</td>
+<td>22291.0667+-271.9116</td>
+<td>22891.4667+-435.1268</td>
+<td>18495.6333+-660.8140</td>
+<td>23037.2667+-303.6910</td>
+<td>18532.7000+-651.9976</td>
+<td>22891.4667+-435.1268</td>
+</tr>
+<tr>
+<td>problem_mknap10</td>
+<td>22295.2000+-495.5780</td>
+<td>22382.8667+-447.6580</td>
+<td>22290.0333+-379.7561</td>
+<td>22285.9333+-386.7331</td>
+<td>21496.3000+-300.2128</td>
+<td>22382.8667+-447.6580</td>
+<td>21516.9667+-288.8174</td>
+<td>22285.9333+-386.7331</td>
+<td>17390.4333+-661.4196</td>
+<td>22382.8667+-447.6580</td>
+<td>17298.7667+-904.0286</td>
+<td>22285.9333+-386.7331</td>
+<td>22419.0667+-461.7930</td>
+<td><strong>22562.2667+-343.0913</strong></td>
+<td>22236.6667+-462.3881</td>
+<td>22271.9000+-407.6409</td>
+<td>21581.8667+-285.0292</td>
+<td><strong>22562.2667+-343.0913</strong></td>
+<td>21613.5667+-296.4517</td>
+<td>22271.9000+-407.6409</td>
+<td>17795.8333+-732.2204</td>
+<td><strong>22562.2667+-343.0913</strong></td>
+<td>16804.2000+-3250.1527</td>
+<td>22271.9000+-407.6409</td>
+<td>22371.2667+-413.9541</td>
+<td>22433.8333+-333.0580</td>
+<td>22321.3333+-372.7821</td>
+<td>22413.9667+-388.4578</td>
+<td>21572.4333+-352.4799</td>
+<td>22433.8333+-333.0580</td>
+<td>21667.1667+-289.8638</td>
+<td>22413.9667+-388.4578</td>
+<td>17593.9667+-539.2283</td>
+<td>22433.8333+-333.0580</td>
+<td>17688.1667+-563.0044</td>
+<td>22413.9667+-388.4578</td>
+</tr>
+<tr>
+<td>problem_mknap11</td>
+<td>22239.9667+-443.8608</td>
+<td>22410.4333+-356.4667</td>
+<td>22223.1000+-373.6129</td>
+<td>22432.6667+-320.2264</td>
+<td>21737.2333+-281.3922</td>
+<td>22410.4333+-356.4667</td>
+<td>21728.3333+-301.3601</td>
+<td>22432.6667+-320.2264</td>
+<td>18548.1667+-690.8990</td>
+<td>22410.4333+-356.4667</td>
+<td>18494.4667+-744.9148</td>
+<td>22432.6667+-320.2264</td>
+<td>22254.7333+-237.0862</td>
+<td>22482.7333+-412.3892</td>
+<td>22214.3333+-527.8998</td>
+<td>22450.3667+-315.5557</td>
+<td>21755.4333+-203.9431</td>
+<td>22482.7333+-412.3892</td>
+<td>21808.2667+-248.2538</td>
+<td>22450.3667+-315.5557</td>
+<td>18351.0333+-925.7309</td>
+<td>22482.7333+-412.3892</td>
+<td>18593.4000+-583.6209</td>
+<td>22450.3667+-315.5557</td>
+<td>22303.4000+-319.2751</td>
+<td><strong>22565.7667+-243.8993</strong></td>
+<td>22311.3333+-342.0147</td>
+<td>22441.8333+-276.2221</td>
+<td>21711.3667+-255.5863</td>
+<td><strong>22565.7667+-243.8993</strong></td>
+<td>21808.4333+-250.9305</td>
+<td>22441.8333+-276.2221</td>
+<td>18627.6000+-500.3272</td>
+<td><strong>22565.7667+-243.8993</strong></td>
+<td>18480.9000+-774.1268</td>
+<td>22441.8333+-276.2221</td>
+</tr>
+<tr>
+<td>problem_mknap12</td>
+<td>22872.4667+-374.1591</td>
+<td>22887.3667+-367.5312</td>
+<td>22744.4667+-326.1277</td>
+<td>22600.4333+-377.4776</td>
+<td>22041.0000+-284.4204</td>
+<td>22887.3667+-367.5312</td>
+<td>22139.5667+-294.3009</td>
+<td>22600.4333+-377.4776</td>
+<td>18049.8000+-573.6802</td>
+<td>22887.3667+-367.5312</td>
+<td>18307.6667+-608.6893</td>
+<td>22600.4333+-377.4776</td>
+<td>22705.2333+-472.3095</td>
+<td>22608.7333+-336.5985</td>
+<td>22694.9000+-379.1508</td>
+<td>22681.9333+-444.0702</td>
+<td>22060.9333+-281.5917</td>
+<td>22608.7333+-336.5985</td>
+<td>22118.0667+-233.9481</td>
+<td>22681.9333+-444.0702</td>
+<td>18636.3333+-685.7545</td>
+<td>22608.7333+-336.5985</td>
+<td>18257.5333+-683.7474</td>
+<td>22681.9333+-444.0702</td>
+<td>22776.1000+-286.2545</td>
+<td>22642.3000+-367.1978</td>
+<td><strong>22891.8000+-309.0910</strong></td>
+<td>22773.3333+-434.5767</td>
+<td>22000.3667+-330.7239</td>
+<td>22642.3000+-367.1978</td>
+<td>22199.4333+-292.4479</td>
+<td>22773.3333+-434.5767</td>
+<td>18333.3333+-644.0376</td>
+<td>22642.3000+-367.1978</td>
+<td>18619.0000+-560.8905</td>
+<td>22773.3333+-434.5767</td>
+</tr>
+<tr>
+<td>problem_mknap13</td>
+<td>23099.0000+-480.4795</td>
+<td>23283.9000+-437.4592</td>
+<td>23117.9333+-411.1488</td>
+<td>23150.4333+-398.7474</td>
+<td>22381.1333+-281.7926</td>
+<td>23283.9000+-437.4592</td>
+<td>22422.9667+-311.3299</td>
+<td>23150.4333+-398.7474</td>
+<td>18704.1000+-643.6493</td>
+<td>23283.9000+-437.4592</td>
+<td>18823.8000+-695.2495</td>
+<td>23150.4333+-398.7474</td>
+<td>23061.1333+-473.6163</td>
+<td>23124.1667+-435.6782</td>
+<td>23083.9333+-373.6678</td>
+<td>23188.9333+-399.8649</td>
+<td>22436.9667+-271.1502</td>
+<td>23124.1667+-435.6782</td>
+<td>22551.7667+-332.5677</td>
+<td>23188.9333+-399.8649</td>
+<td>18607.7667+-675.1013</td>
+<td>23124.1667+-435.6782</td>
+<td>18890.3000+-682.9523</td>
+<td>23188.9333+-399.8649</td>
+<td>23102.6333+-373.1582</td>
+<td><strong>23335.0667+-425.8869</strong></td>
+<td>23005.8333+-496.0248</td>
+<td>23158.4667+-454.8408</td>
+<td>22471.8667+-307.5461</td>
+<td><strong>23335.0667+-425.8869</strong></td>
+<td>22563.6333+-292.2904</td>
+<td>23158.4667+-454.8408</td>
+<td>18704.1333+-701.1756</td>
+<td><strong>23335.0667+-425.8869</strong></td>
+<td>18819.9000+-768.3883</td>
+<td>23158.4667+-454.8408</td>
+</tr>
+<tr>
+<td>problem_mknap14</td>
+<td>24183.3667+-421.8307</td>
+<td>24107.0000+-494.9607</td>
+<td>24194.5000+-450.6194</td>
+<td>23900.8667+-459.8946</td>
+<td>23395.0333+-217.3994</td>
+<td>24107.0000+-494.9607</td>
+<td>23429.4000+-347.2838</td>
+<td>23900.8667+-459.8946</td>
+<td>19196.1000+-912.1883</td>
+<td>24107.0000+-494.9607</td>
+<td>19367.8000+-860.7094</td>
+<td>23900.8667+-459.8946</td>
+<td>24022.4667+-350.2255</td>
+<td>23859.8667+-461.8916</td>
+<td>24158.6667+-361.4434</td>
+<td>23691.2000+-447.5219</td>
+<td>23387.5000+-372.5607</td>
+<td>23859.8667+-461.8916</td>
+<td>23527.7667+-306.1056</td>
+<td>23691.2000+-447.5219</td>
+<td>19527.2000+-983.7979</td>
+<td>23859.8667+-461.8916</td>
+<td>19378.0333+-608.8334</td>
+<td>23691.2000+-447.5219</td>
+<td>24225.3333+-309.4830</td>
+<td>24068.2000+-508.8675</td>
+<td><strong>24242.7000+-341.1307</strong></td>
+<td>23927.4333+-412.3731</td>
+<td>23380.5333+-323.0117</td>
+<td>24068.2000+-508.8675</td>
+<td>23577.6000+-280.1969</td>
+<td>23927.4333+-412.3731</td>
+<td>19617.1333+-529.1294</td>
+<td>24068.2000+-508.8675</td>
+<td>19338.4667+-644.8250</td>
+<td>23927.4333+-412.3731</td>
+</tr>
+<tr>
+<td>problem_mknap15</td>
+<td>21976.5000 +- 471.3296</td>
+<td><strong>22270.5667 +- 315.8103</strong></td>
+<td>21855.0667 +- 580.6144</td>
+<td>22142.4667 +- 474.8367</td>
+<td>21311.9333 +- 323.9320</td>
+<td><strong>22270.5667 +- 315.8103</strong></td>
+<td>21319.6000 +- 343.1511</td>
+<td>22142.4667 +- 474.8367</td>
+<td>18132.7667 +- 520.2298</td>
+<td><strong>22270.5667 +- 315.8103</strong></td>
+<td>17998.8333 +- 614.9573</td>
+<td>22142.4667 +- 474.8367</td>
+<td>21823.4667 +- 551.7546</td>
+<td>22099.3000 +- 369.9510</td>
+<td>21913.9667 +- 410.8083</td>
+<td>22018.9333 +- 364.5863</td>
+<td>21316.7667 +- 284.9507</td>
+<td>22099.3000 +- 369.9510</td>
+<td>21461.8333 +- 348.1339</td>
+<td>22018.9333 +- 364.5863</td>
+<td>18139.7000 +- 694.4435</td>
+<td>22099.3000 +- 369.9510</td>
+<td>17907.4000 +- 678.1443</td>
+<td>22018.9333 +- 364.5863</td>
+<td>21909.8667 +- 472.3773</td>
+<td>22207.6333 +- 423.2661</td>
+<td>21935.1000 +- 396.9149</td>
+<td>22180.2000 +- 381.8350</td>
+<td>21393.3667 +- 293.7319</td>
+<td>22207.6333 +- 423.2661</td>
+<td>21497.7333 +- 304.2387</td>
+<td>22180.2000 +- 381.8350</td>
+<td>18184.4000 +- 681.8037</td>
+<td>22207.6333 +- 423.2661</td>
+<td>18298.1333 +- 582.1551</td>
+<td>22180.2000 +- 381.8350</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Table 1 shows that the best results are spread across various configurations, with no single configuration consistently outperforming the rest across all problems. We will conduct a statistical study to validate these observations and to determine if significant differences exist between the parameters.</p>
+<p>Performing a Shapiro-Wilk test, as reported in Table 2, reveals that the p-values are all below 0.05, leading us to reject the null hypothesis of data normality. Consequently, this precludes parametric tests for comparison.</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Statistic</th>
+<th>p-value</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PC_0.5_PM_0.01_TC_0_TM_0</td>
+<td>0.8113894794919658</td>
+<td>0.005166571029038583</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.01_TC_0_TM_1</td>
+<td>0.8048064982060121</td>
+<td>0.004240088072504858</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.01_TC_1_TM_0</td>
+<td>0.812657064303477</td>
+<td>0.005368554974593424</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.01_TC_1_TM_1</td>
+<td>0.8048280891051611</td>
+<td>0.004242819520479358</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.1_TC_0_TM_0</td>
+<td>0.8147421005832808</td>
+<td>0.005719315354991399</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.1_TC_0_TM_1</td>
+<td>0.8048064982060121</td>
+<td>0.004240088072504858</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.1_TC_1_TM_0</td>
+<td>0.8152720014453675</td>
+<td>0.005812295997479738</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.1_TC_1_TM_1</td>
+<td>0.8048280891051611</td>
+<td>0.004242819520479358</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.3_TC_0_TM_0</td>
+<td>0.8053581634106413</td>
+<td>0.004310470525290069</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.3_TC_0_TM_1</td>
+<td>0.8048064982060121</td>
+<td>0.004240088072504858</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.3_TC_1_TM_0</td>
+<td>0.8096239401023236</td>
+<td>0.004898624275369967</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.5_PM_0.3_TC_1_TM_1</td>
+<td>0.8048280891051611</td>
+<td>0.004242819520479358</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.01_TC_0_TM_0</td>
+<td>0.8091426218475521</td>
+<td>0.004828174090835264</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.01_TC_0_TM_1</td>
+<td>0.8013434208386351</td>
+<td>0.0038253290290127242</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.01_TC_1_TM_0</td>
+<td>0.8122795791932431</td>
+<td>0.005307539088230427</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.01_TC_1_TM_1</td>
+<td>0.8029545918885614</td>
+<td>0.004012639215367022</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.1_TC_0_TM_0</td>
+<td>0.8140641540401486</td>
+<td>0.005602661136534286</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.1_TC_0_TM_1</td>
+<td>0.8013434208386351</td>
+<td>0.0038253290290127242</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.1_TC_1_TM_0</td>
+<td>0.8154458463644174</td>
+<td>0.0058431498760075085</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.1_TC_1_TM_1</td>
+<td>0.8029545918885614</td>
+<td>0.004012639215367022</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.3_TC_0_TM_0</td>
+<td>0.8031717505950834</td>
+<td>0.004038623969632399</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.3_TC_0_TM_1</td>
+<td>0.8013434208386351</td>
+<td>0.0038253290290127242</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.3_TC_1_TM_0</td>
+<td>0.8171666522532625</td>
+<td>0.006158138514632096</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.75_PM_0.3_TC_1_TM_1</td>
+<td>0.8029545918885614</td>
+<td>0.004012639215367022</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.01_TC_0_TM_0</td>
+<td>0.8123900640473918</td>
+<td>0.005325320784407948</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.01_TC_0_TM_1</td>
+<td>0.8065771918984779</td>
+<td>0.0044704511768626125</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.01_TC_1_TM_0</td>
+<td>0.8117141196633167</td>
+<td>0.0052175176617234136</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.01_TC_1_TM_1</td>
+<td>0.8034439700232545</td>
+<td>0.004071450832722235</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.1_TC_0_TM_0</td>
+<td>0.8141583165673903</td>
+<td>0.005618710985053393</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.1_TC_0_TM_1</td>
+<td>0.8065771918984779</td>
+<td>0.0044704511768626125</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.1_TC_1_TM_0</td>
+<td>0.8146644015848903</td>
+<td>0.005705815394500915</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.1_TC_1_TM_1</td>
+<td>0.8034439700232545</td>
+<td>0.004071450832722235</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.3_TC_0_TM_0</td>
+<td>0.8082477955030016</td>
+<td>0.00470005252751512</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.3_TC_0_TM_1</td>
+<td>0.8065771918984779</td>
+<td>0.0044704511768626125</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.3_TC_1_TM_0</td>
+<td>0.8019575424071641</td>
+<td>0.0038956015497486796</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+<tr>
+<td>PC_0.9_PM_0.3_TC_1_TM_1</td>
+<td>0.8034439700232545</td>
+<td>0.004071450832722235</td>
+<td>Reject H0 with alpha = 0.05 (Different distributions)</td>
+</tr>
+</tbody></table>
+<p>We applied the Friedman test to identify whether significant differences exist, and the results are presented in Table 3. No significant differences detected, so we selected the configuration with <strong>Crossover Type</strong>: UC, <strong>Mutation Type</strong>: Swap, <strong>Crossover Probability</strong>: 0.9, and <strong>Mutation Probability</strong>: 0.01 to compare with simulated annealing.</p>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th>p-value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>29.35945945945946</td>
+<td>0.7367383661222924</td>
+<td>No Reject H0 with alpha 0.05</td>
+</tr>
+</tbody></table>
+
+<figure>
+    <img src="./img/Nemenyi-GA.png" alt="Test Nemenyi Genetic Algorithm">
+    <figcaption>Figure 1: Results Nemenyi test (significance level of 0.05) for Genetic Algorithm.</figcaption>
+</figure>
+
+<h2 id="genetic-algorithm-ga-1">Simulated Annealing (SA)</h2>
+<p>As for simulated annealing, the parameter under variation is the temperature decay rate. Four potential values will be examined: 0.5, 0.75, 0.9, and 0.99. The number of iterations for cooling has been set to 5, and the number of iterations for generating the initial temperature is set to 10.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>0.5</th>
+<th>0.75</th>
+<th>0.9</th>
+<th>0.99</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>problem_mknap1</td>
+<td><strong>3800.0000 +- 0.0000</strong></td>
+<td><strong>3800.0000 +- 0.0000</strong></td>
+<td><strong>3800.0000 +- 0.0000</strong></td>
+<td><strong>3800.0000 +- 0.0000</strong></td>
+</tr>
+<tr>
+<td>problem_mknap2</td>
+<td><strong>8706.1000 +- 0.0000</strong></td>
+<td><strong>8706.1000 +- 0.0000</strong></td>
+<td><strong>8706.1000 +- 0.0000</strong></td>
+<td><strong>8706.1000 +- 0.0000</strong></td>
+</tr>
+<tr>
+<td>problem_mknap3</td>
+<td>3999.0000 +- 20.0603</td>
+<td>4008.000           7.9438</td>
+<td>4014.3333 +- 2.5371</td>
+<td><strong>4015.0000 +- 0.0000</strong></td>
+</tr>
+<tr>
+<td>problem_mknap4</td>
+<td>5952.5000 +- 94.3923</td>
+<td>6027.666           67.1942</td>
+<td>6054.5000 +- 52.1330</td>
+<td><strong>6099.6667 +- 19.9107</strong></td>
+</tr>
+<tr>
+<td>problem_mknap5</td>
+<td>11788.3333 +- 183.3422</td>
+<td>11864.6667        - 200.8513</td>
+<td>12082.8333 +- 180.2713</td>
+<td><strong>12276.5000 +- 114.5843</strong></td>
+</tr>
+<tr>
+<td>problem_mknap6</td>
+<td>10391.5667 +- 83.0146</td>
+<td>10365.633         - 60.3915</td>
+<td>10425.2333 +- 75.2553</td>
+<td><strong>10488.6000 +- 68.0657</strong></td>
+</tr>
+<tr>
+<td>problem_mknap7</td>
+<td>15789.5333 +- 250.0175</td>
+<td>15785.8000        - 190.5094</td>
+<td>15991.8000 +- 186.4498</td>
+<td><strong>16172.8667 +- 176.4250</strong></td>
+</tr>
+<tr>
+<td>problem_mknap8</td>
+<td>20324.2333 +- 385.4660</td>
+<td>20197.0667        - 375.7584</td>
+<td>20330.0000 +- 439.3204</td>
+<td><strong>21228.7333 +- 367.9183</strong></td>
+</tr>
+<tr>
+<td>problem_mknap9</td>
+<td>20162.0333 +- 368.4218</td>
+<td>20121.8667        - 312.6166</td>
+<td>20207.7000 +- 378.5655</td>
+<td><strong>21011.6333 +- 403.8887</strong></td>
+</tr>
+</tbody></table>
+<p>The Table 4 presents the average fitness results for each problem, considering 30 repetitions. At first glance, DT=0.99 appears to provide the best performance, often also exhibiting lower standard deviation. To confirm the presence of significant differences between the parameters, a statistical study will be conducted.</p>
+<p>When performing the Shapiro-Wilks test (see Table 5), it is evident in all cases that the p-value is less than 0.05, indicating that the data do not follow a normal distribution. This result precludes the use of parametric tests for comparison.</p>
+<table>
+<thead>
+<tr>
+<th>DT</th>
+<th>Statistic</th>
+<th>p-value</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.5</td>
+<td>0.8085108579494737</td>
+<td>0.0032445710252630953</td>
+<td>Reject H0 with alpha 0.05</td>
+</tr>
+<tr>
+<td>0.75</td>
+<td>0.8064721373423671</td>
+<td>0.004263931328816414</td>
+<td>Reject H0 with alpha 0.05</td>
+</tr>
+<tr>
+<td>0.9</td>
+<td>0.8094566687108026</td>
+<td>0.002771665644598683</td>
+<td>Reject H0 with alpha 0.05</td>
+</tr>
+<tr>
+<td>0.99</td>
+<td>0.816295525722131</td>
+<td>0.0006477628610655484</td>
+<td>Reject H0 with alpha 0.05</td>
+</tr>
+</tbody></table>
+
+
+<p>Applying the Friedman test to check for significant differences yields the results shown in Table 6. The identification of significant differences allows for the use of the Nemenyi test to ascertain the relationships between the algorithms. The findings, displayed in Figure 2, lead to the conclusion that the best configuration is DT=0.99. This setting not only shows a lower standard deviation but also significant differences compared to 0.75 and 0.5, albeit not with 0.9.</p>
+
+
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th>p-value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>30.44</td>
+<td>1.115152622910287e-06</td>
+<td>Reject H0 with alpha 0.05</td>
+</tr>
+</tbody></table>
+
+<figure>
+    <img src="./img/Nemenyi-SA.png" alt="Test Nemenyi Simulated Annealing">
+    <figcaption>Figure 2: Results Nemenyi test (significance level of 0.05) for Simulated Annealing.</figcaption>
+</figure>
+</body>
+</html>
